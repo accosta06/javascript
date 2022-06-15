@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale">
+</head>
+<body>
+    <h1 id="titulo1" class="badteste">RAPTO DOS MINORS NA DEEP WEB</h1>
+    <button id = "botao" onclick="goodpage()" >Transform</button>
+    <img class="badteste" src="kids.jpg">
+</body>
+</html>
+
+<style>
+    .badteste{
+        color:crimson;
+        font-family:'Times New Roman', Times, serif;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        background-color: black;
+    }
+
+    .goodteste{
+        color: blue;
+        font-family:'Times New Roman', Times, serif;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        background-color: white;
+    }
+
+    body{
+        color: black;
+    }
+    
+</style>
+
+<script>
+    function goodpage(){
+        if(document.getElementById("titulo1").className = "badteste"){
+            document.getElementById("titulo1").className = "goodteste";
+            document.getElementById("titulo1").innerHTML = "JARDIM INFANTIL :D";
+        }
+    }
+</script>
