@@ -28,3 +28,35 @@ function myFunction(){
     document.getElementById("idade").append(" " + MY_OBJ.idade);
     document.getElementById("morada").append(" " + MY_OBJ.morada);
 }
+
+function calcularIMC(){
+    let altura = parseInt(document
+        .querySelector("#altura").value);
+
+    let peso = parseInt(document
+            .querySelector("#peso").value);
+
+    let resultadoIMC = document.querySelector("#resultadoIMC");
+
+    if (altura === "" || isNaN(altura)) 
+        result.innerHTML = "Altura inválida!";
+
+    else if (peso === "" || isNaN(peso)) 
+        result.innerHTML = "Peso inválido!";
+
+    else {
+
+        let bmi = (peso / ((altura * altura) 
+                            / 10000)).toFixed(2);
+
+        if (bmi < 18.6) resultadoIMC.innerHTML =
+            `Subpeso : <span>${bmi}</span>`;
+
+        else if (bmi >= 18.6 && bmi < 24.9) 
+            resultadoIMC.innerHTML = 
+                `Normal : <span>${bmi}</span>`;
+
+        else resultadoIMC.innerHTML =
+            `Sobrepeso : <span>${bmi}</span>`;
+    }
+}

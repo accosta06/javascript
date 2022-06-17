@@ -6,16 +6,34 @@
     <link rel="stylesheet" href="./folhaestilo.css">
 </head>
 <body>
-    <h1 id="titulo"><center>Formulário</center></h1>
+    <h1 id="titulo"><center>KamajiWeb</center></h1>
     <center><div id="parag"></div></center>
-    <div id="blocoprincipal">
-        <div id="caixainfo">
+    <div id="divprincipal">
+    <div id="coluna1">
+        <div id="blocoinfo">
             <h2>Informações</h2>
             <p id="nome">Nome: </p>
             <p id="idade">Idade: </p>
             <p id="morada">Morada: </p>
-            <center><button onclick="myFunction()" id="botao">Começar</button></center>
+            <button onclick="myFunction()" id="botao">Começar</button>
+        </div>
+        <div id="blocoIMC">
+            <h2>IMC</h2>
+            <p>Altura: </p>
+            <input type="text" id="altura">
+            <p>Peso: </p>
+            <input type="text" id="peso">
+            <div>
+                <button id="botaoIMC" onclick="calcularIMC()">Calcular</button>
+                <p id="resultadoIMC"></p>
+            </div>
         </div>
     </div>
+    <div id="coluna2">
+        <div id="totolotoWeb">
+            <h2>Totoloto Web</h2>
+        </div>
+    </div>
+</div>
 </body>
 </html>
