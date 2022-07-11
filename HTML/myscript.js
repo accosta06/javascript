@@ -60,3 +60,30 @@ function calcularIMC(){
             `Sobrepeso : <span>${bmi}</span>`;
     }
 }
+
+function aMinhaFuncao(value, index, array){
+    console.log(value + ' ref ao indice ' + index + ' a multiplicar por 10 dá ' + value*10 )
+}
+
+const numeros_em = [1,2,3,4,5,6,7,8,9,10,
+                    11,12,13,14,15,16,17,18,19,20,
+                    21,22,23,24,25,26,27,28,29,30,
+                    31,32,33,34,35,36,37,38,39,40,
+                    41,42,43,44,45,46,47,48,49,50];
+
+const estrelas_em = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+for (let i=1; i <=5; i++){
+    var parent = document.getElementById("parentTTLT")
+    let numerosort = numeros_em[Math.floor(Math.random() * 49)];
+    let pos = String.toString('n' + i)
+    console.log(pos)
+    texto = ('O ' + i + 'º número sorteado foi ' + numeros_em[Math.floor(Math.random() * 49)]);
+    parent.appendChild(texto);
+    document.getElementById(pos).innerHTML = String.toString.numerosort
+}
+
+for (let i=1; i <=3; i++){
+    totolotoParag = document.createElement("p");
+    totolotoParag.append('A ' + i + 'ª estrela sorteada foi ' + estrelas_em[Math.floor(Math.random() * 11)]);
+}

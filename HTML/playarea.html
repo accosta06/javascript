@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Página</title>
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" href="./folhaestilo_play.css">
+</head>
+<body>
+    <h1 id="titulo"><center>KamajiWeb</center></h1>
+    <center><div id="parag"></div></center>
+    <div id="menu">
+        <a href="index.html" class="menutext">Home</a>
+        <a href="playarea.html" class="menutext">Play Area</a>
+    </div>
+    <div id="divprincipal">
+        <div id="coluna1">
+            <div id="blocoinfo">
+                <h2>Informações</h2>
+                <p id="nome">Nome: </p>
+                <p id="idade">Idade: </p>
+                <p id="morada">Morada: </p>
+                <button onclick="myFunction()" class="botao">Começar</button>
+            </div>
+            <div id="blocoIMC">
+                <h2>IMC</h2>
+                <p class="inputtext">Altura: </p>
+                <input type="text" id="altura" class="inputtext">
+                <br>
+                <p class="inputtext">Peso:   </p>
+                <input type="text" class="inputtext" id="peso">
+                <div>
+                    <button class="botao" onclick="calcularIMC()">Calcular</button>
+                    <p id="resultadoIMC"></p>
+                </div>
+            </div>
+        </div>
+        <vr>
+        <div id="coluna2">
+            <div id="totolotoWeb">
+                <h2>Totoloto Web</h2>
+                <div id="parentTTLT"></div>
+                <button class="botao" id="jogar">Jogar</button>
+            </div>
+        </div>
+</div>
+</body>
+</html>
