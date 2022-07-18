@@ -37,6 +37,7 @@ function calcularIMC(){
             .querySelector("#peso").value);
 
     let resultadoIMC = document.querySelector("#resultadoIMC");
+    divImagem = document.querySelector("#imagem");
 
     if (altura === "" || isNaN(altura)) 
         result.innerHTML = "Altura inválida!";
@@ -44,19 +45,39 @@ function calcularIMC(){
     else if (peso === "" || isNaN(peso)) 
         result.innerHTML = "Peso inválido!";
 
-    else {
+    function displayResult(){
 
         let bmi = (peso / ((altura * altura) 
                             / 10000)).toFixed(2);
 
-        if (bmi < 18.6) resultadoIMC.innerHTML =
-            `Subpeso : <span>${bmi}</span>`;
+        if (bmi < 18.6){
+            resultadoIMC.innerHTML = `Subpeso : <span>${bmi}</span>`;
+        }
 
-        else if (bmi >= 18.6 && bmi < 24.9) 
-            resultadoIMC.innerHTML = 
-                `Normal : <span>${bmi}</span>`;
+        else if (bmi >= 18.6 && bmi < 24.9){
+            resultadoIMC.innerHTML = `Normal : <span>${bmi}</span>`;
+        }
 
-        else resultadoIMC.innerHTML =
-            `Sobrepeso : <span>${bmi}</span>`;
+        else if (bmi >= 24.9 && bmi < 50){
+            resultadoIMC.innerHTML = `Sobrepeso : <span>${bmi}</span>`;
+        }
+
+        else if (bmi > 50 && divImagem.childElementCount == 0){
+                resultadoIMC.innerHTML = "";
+                img = document.createElement("img");
+                img.src = "./balofo.jpg";
+                img.width = 200;
+                img.height = 200;
+                divImagem.append(img);
+        }
+    }
+
+    if (divImagem.childElementCount == 0){
+        displayResult();
+    }
+
+    else if (divImagem.childElementCount > 0){
+        divImagem.lastChild.remove();
+        displayResult();
     }
 }
